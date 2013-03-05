@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Operation date:</b>
+  <%= @case.operation_date %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @case.position %>
+</p>
+
+<p>
+  <b>Patient:</b>
+  <%= @case.patient_id %>
+</p>
+
+<p>
+  <b>Surgeon:</b>
+  <%= @case.surgeon_id %>
+</p>
+
+<p>
+  <b>Anesthesia:</b>
+  <%= @case.anesthesia_id %>
+</p>
+
+<p>
+  <b>Surgery:</b>
+  <%= @case.surgery %>
+</p>
+
+<p>
+  <b>Triage:</b>
+  <%= @case.triage %>
+</p>
+
+<p>
+  <b>Case cart:</b>
+  <%= @case.case_cart %>
+</p>
+
+<p>
+  <b>Or room:</b>
+  <%= @case.or_room %>
+</p>
+
+<p>
+  <b>Time estimate:</b>
+  <%= @case.time_estimate %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @case.notes %>
+</p>
+
+<p>
+  <b>Finished:</b>
+  <%= @case.finished %>
+</p>
+
+<p>
+  <b>Started:</b>
+  <%= @case.started %>
+</p>
+
+<p>
+  <b>Started at:</b>
+  <%= @case.started_at %>
+</p>
+
+<p>
+  <b>Finished at:</b>
+  <%= @case.finished_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_case_path(@case) %> |
+<%= link_to 'Back', cases_path %>

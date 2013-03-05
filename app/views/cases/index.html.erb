@@ -1,0 +1,51 @@
+<h1>Listing cases</h1>
+
+<table>
+  <tr>
+    <th>Operation date</th>
+    <th>Position</th>
+    <th>Patient</th>
+    <th>Surgeon</th>
+    <th>Anesthesia</th>
+    <th>Surgery</th>
+    <th>Triage</th>
+    <th>Case cart</th>
+    <th>Or room</th>
+    <th>Time estimate</th>
+    <th>Notes</th>
+    <th>Finished</th>
+    <th>Started</th>
+    <th>Started at</th>
+    <th>Finished at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cases.each do |case| %>
+  <tr>
+    <td><%= case.operation_date %></td>
+    <td><%= case.position %></td>
+    <td><%= case.patient_id %></td>
+    <td><%= case.surgeon_id %></td>
+    <td><%= case.anesthesia_id %></td>
+    <td><%= case.surgery %></td>
+    <td><%= case.triage %></td>
+    <td><%= case.case_cart %></td>
+    <td><%= case.or_room %></td>
+    <td><%= case.time_estimate %></td>
+    <td><%= case.notes %></td>
+    <td><%= case.finished %></td>
+    <td><%= case.started %></td>
+    <td><%= case.started_at %></td>
+    <td><%= case.finished_at %></td>
+    <td><%= link_to 'Show', case %></td>
+    <td><%= link_to 'Edit', edit_case_path(case) %></td>
+    <td><%= link_to 'Destroy', case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Case', new_case_path %>
