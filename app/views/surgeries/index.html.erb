@@ -1,51 +1,37 @@
-<h1>Listing surgeries</h1>
+<h3 style="text-align: center;"> <%= Date.today.strftime('%b %-d, %Y') %> </h3>
 
-<table>
-  <tr>
-    <th>Anesthesia</th>
-    <th>Case cart</th>
-    <th>Finished</th>
-    <th>Finished at</th>
-    <th>Notes</th>
-    <th>Operation date</th>
-    <th>Or room</th>
-    <th>Patient</th>
-    <th>Position</th>
-    <th>Started</th>
-    <th>Started at</th>
-    <th>Surgeon</th>
-    <th>Surgery</th>
-    <th>Time estimate</th>
-    <th>Triage</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table class="table table-hover">
 <% @surgeries.each do |surgery| %>
-  <tr>
-    <td><%= surgery.anesthesia_id %></td>
-    <td><%= surgery.case_cart %></td>
-    <td><%= surgery.finished %></td>
-    <td><%= surgery.finished_at %></td>
-    <td><%= surgery.notes %></td>
-    <td><%= surgery.operation_date %></td>
-    <td><%= surgery.or_room %></td>
-    <td><%= surgery.patient_id %></td>
-    <td><%= surgery.position %></td>
-    <td><%= surgery.started %></td>
-    <td><%= surgery.started_at %></td>
-    <td><%= surgery.surgeon_id %></td>
-    <td><%= surgery.surgery %></td>
-    <td><%= surgery.time_estimate %></td>
-    <td><%= surgery.triage %></td>
-    <td><%= link_to 'Show', surgery %></td>
-    <td><%= link_to 'Edit', edit_surgery_path(surgery) %></td>
-    <td><%= link_to 'Destroy', surgery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <tr><td class="lead" style="color: <%= surgery.case_color %>"><%= surgery.surgery %></td></tr>
+<tr><td><%= surgery.surgeon.name %> (<%= surgery.or_room %> - <%= surgery.time_estimate %>min)</td></tr>   
 <% end %>
 </table>
 
 <br />
 
 <%= link_to 'New Surgery', new_surgery_path %>
+ 
+<% if false %>
+   ...
+
+  <!-- <td><%= surgery.anesthesia_id %></td>
+    <td><%= surgery.case_cart %></td>
+    <td><%= surgery.finished %></td>
+    <td><%= surgery.finished_at %></td>
+    <td><%= surgery.notes %></td>
+    <td><%= surgery.operation_date %></td>
+    <td><%= surgery.or_room %></td>
+  </tr>
+  <tr>
+    <td><%= surgery.patient_id %></td>
+    <td><%= surgery.position %></td>
+    <td><%= surgery.started %></td>
+    <td><%= surgery.started_at %></td>
+
+  
+    <td><%= surgery.time_estimate %></td>
+    <td><%= surgery.triage %></td><td><%= link_to 'Show', surgery %></td>
+    <td><%= link_to 'Edit', edit_surgery_path(surgery) %></td>
+    <td><%= link_to 'Destroy', surgery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+    --><% end %>

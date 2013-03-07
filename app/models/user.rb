@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :surgeries
 
   validates :password, :presence => true
-  validates :staff_type, :presence=>true, :inclusion => {:in => 1..3}
+  validates :staff_type, :presence=>true, :inclusion => {:in => 1..4}
   validates :email, :format => { :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :message=> 'Not a valid email.' }
   
   validates :cell_phone, :phone_number => true

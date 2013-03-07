@@ -4,4 +4,15 @@ class Surgery < ActiveRecord::Base
   belongs_to :surgeon, class_name: 'User'
   belongs_to :anesthesia, class_name: 'User'
   belongs_to :patient
+
+   def case_color
+    if self.triage == 'A'
+        "red"
+    elsif self.triage == 'B'
+        "blue"
+    else   
+        "grey"
+    end
+
+  end
 end

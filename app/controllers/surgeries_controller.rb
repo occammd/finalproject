@@ -1,8 +1,6 @@
 class SurgeriesController < ApplicationController
   
-
-
-   require 'uri'
+  require 'uri'
   Twilio_sid = 'ACee185e4fdf1ff6dac321d90841f23f25'
   Twilio_token = '6fcd44041f413e6db99c8513673e0a5a'
   Twilio_phone_number = "6479311279"
@@ -33,7 +31,12 @@ class SurgeriesController < ApplicationController
     rescue StandardError => bang
       redirect_to :action => '.', 'msg' => "Error #{bang}"
       return
-    end# GET /surgeries
+    end
+end
+    
+ 
+
+  # GET /surgeries
   # GET /surgeries.json
   def index
     @surgeries = Surgery.all

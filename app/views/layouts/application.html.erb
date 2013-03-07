@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -15,14 +15,14 @@
             <span class="icon-bar"></span>
           </button> 
           <a id="logo" class="brand" href="/">
-              <%= image_tag('twilio.png') %> Twilio Hack Night
+              <%= image_tag('logo.png') %>
           </a>
 
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+                <li class="<%= 'active' if params[:controller] == 'surgeries' %>"><a href="/">Surgery</a></li>
+                <li class="<%= 'active' if params[:controller] == 'users' %>"><a href="/users">Staff</a></li>
+                <li class="<%= 'active' if params[:controller] == 'patients' %>"><a href="/patients">Patients</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
