@@ -1,9 +1,10 @@
-<h3 style="text-align: center;"> <%= Date.today.strftime('%b %-d, %Y') %> </h3>
+<h4 style="text-align: center;"> <%= Time.now.strftime('%b %-d, %Y %r') %> </h4>
 
 <table class="table table-hover">
 <% @surgeries.each do |surgery| %>
-  <tr><td class="lead" style="color: <%= surgery.case_color %>"><%= surgery.surgery %></td></tr>
-<tr><td><%= surgery.surgeon.name %> (<%= surgery.or_room %> - <%= surgery.time_estimate %>min)</td></tr>   
+  <tr><td class="lead" style="color: <%= surgery.case_color %>">
+    <%= surgery.surgery %></td></tr>
+<tr><td><%= surgery.surgeon.name %> (<%= surgery.or_room %> - <%= surgery.time_estimate %>min)<%= link_to 'Edit', edit_surgery_path(surgery) %></td></tr>   
 <% end %>
 </table>
 
