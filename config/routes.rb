@@ -1,13 +1,9 @@
 TimeToOR::Application.routes.draw do
+  resources :surgeries
   resources :users
-
-
   resources :patients
 
-
-  resources :cases
-
-  root to: 'cases#index'
+  root :to => 'surgeries#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Anesthesia:</b>
+  <%= @surgery.anesthesia_id %>
+</p>
+
+<p>
+  <b>Case cart:</b>
+  <%= @surgery.case_cart %>
+</p>
+
+<p>
+  <b>Finished:</b>
+  <%= @surgery.finished %>
+</p>
+
+<p>
+  <b>Finished at:</b>
+  <%= @surgery.finished_at %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @surgery.notes %>
+</p>
+
+<p>
+  <b>Operation date:</b>
+  <%= @surgery.operation_date %>
+</p>
+
+<p>
+  <b>Or room:</b>
+  <%= @surgery.or_room %>
+</p>
+
+<p>
+  <b>Patient:</b>
+  <%= @surgery.patient_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @surgery.position %>
+</p>
+
+<p>
+  <b>Started:</b>
+  <%= @surgery.started %>
+</p>
+
+<p>
+  <b>Started at:</b>
+  <%= @surgery.started_at %>
+</p>
+
+<p>
+  <b>Surgeon:</b>
+  <%= @surgery.surgeon_id %>
+</p>
+
+<p>
+  <b>Surgery:</b>
+  <%= @surgery.surgery %>
+</p>
+
+<p>
+  <b>Time estimate:</b>
+  <%= @surgery.time_estimate %>
+</p>
+
+<p>
+  <b>Triage:</b>
+  <%= @surgery.triage %>
+</p>
+
+
+<%= link_to 'Edit', edit_surgery_path(@surgery) %> |
+<%= link_to 'Back', surgeries_path %>

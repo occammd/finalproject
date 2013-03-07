@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  anesthesia_id: 1
+  case_cart: MyString
+  finished: false
+  finished_at: 2013-03-05 09:02:59
+  notes: MyText
+  operation_date: 2013-03-05
+  or_room: MyString
+  patient_id: 1
+  position: 1
+  started: false
+  started_at: 2013-03-05 09:02:59
+  surgeon_id: 1
+  surgery: MyString
+  time_estimate: 1
+  triage: MyString
+
+two:
+  anesthesia_id: 1
+  case_cart: MyString
+  finished: false
+  finished_at: 2013-03-05 09:02:59
+  notes: MyText
+  operation_date: 2013-03-05
+  or_room: MyString
+  patient_id: 1
+  position: 1
+  started: false
+  started_at: 2013-03-05 09:02:59
+  surgeon_id: 1
+  surgery: MyString
+  time_estimate: 1
+  triage: MyString
