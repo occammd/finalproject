@@ -11,67 +11,63 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :anesthesia_id %><br />
+  <div class="field">  
     <%= f.number_field :anesthesia_id %>
   </div>
   <div class="field">
-    <%= f.label :case_cart %><br />
-    <%= f.text_field :case_cart %>
+    <%= f.text_field :case_cart, placeholder: 'Case cart',class: 'input-block-level' %>
   </div>
   <div class="field">
-    <%= f.label :finished %><br />
     <%= f.check_box :finished %>
   </div>
   <div class="field">
-    <%= f.label :finished_at %><br />
-    <%= f.datetime_select :finished_at %>
+    <%= f.text_field :finished_at, id: 'date' %>
+  </div>
+  <div class="field">  
+    <%= f.text_field :surgery, placeholder: 'Surgery', class: 'input-block-level' %>
   </div>
   <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, placeholder: 'Notes' %>
   </div>
   <div class="field">
     <%= f.label :operation_date %><br />
     <%= f.date_select :operation_date %>
   </div>
   <div class="field">
-    <%= f.label :or_room %><br />
-    <%= f.text_field :or_room %>
+    <%= f.text_field :or_room, placeholder: 'OR room' %>
+  </div>
+  <div class="field">   
+    <%= f.select :patient_id, Patient.all.map {|x| [x.name, x.id]} %>
+  </div>
+ 
+  
+  <div class="field">
+    <%= f.text_field :time_estimate, placeholder: 'Time estimate' %>
   </div>
   <div class="field">
-    <%= f.label :patient_id %><br />
-    <%= f.number_field :patient_id %>
-  </div>
-  <div class="field">
-    <%= f.label :position %><br />
-    <%= f.number_field :position %>
-  </div>
-  <div class="field">
-    <%= f.label :started %><br />
-    <%= f.check_box :started %>
-  </div>
-  <div class="field">
-    <%= f.label :started_at %><br />
-    <%= f.datetime_select :started_at %>
-  </div>
-  <div class="field">
-    <%= f.label :surgeon_id %><br />
-    <%= f.number_field :surgeon_id %>
-  </div>
-  <div class="field">
-    <%= f.label :surgery %><br />
-    <%= f.text_field :surgery %>
-  </div>
-  <div class="field">
-    <%= f.label :time_estimate %><br />
-    <%= f.number_field :time_estimate %>
-  </div>
-  <div class="field">
-    <%= f.label :triage %><br />
-    <%= f.text_field :triage %>
+    <%= f.select :triage, options_for_select([['A - Emergent (<2h)','A'],
+    ['B - Urgent(<8h)','B'],['C - Non-elective <48h)','C']])%>
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
+<% end %>
+
+<% if false %>
+ <div class="field">
+
+    <%= f.number_field :position %>
+  </div>
+  <div class="field">
+  
+    <%= f.check_box :started %>
+  </div>
+  <div class="field">
+  
+    <%= f.datetime_select :started_at %>
+  </div>
+  <div class="field">
+  
+    <%= f.number_field :surgeon_id %>
   </div>
 <% end %>

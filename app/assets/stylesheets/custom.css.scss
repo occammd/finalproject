@@ -10,14 +10,19 @@ body{
 	padding-left: 20px;
 }
 
-td {
-	 vertical-align: middle;
-}
 .navbar .btn-navbar {
     margin-top: 5px;
 }
 
-#logo {
+.navbar .brand {
     padding: 0;
 }
 
+.lead {
+	
+	margin-bottom:0px;
+}
+
+p{
+	margin: 0 0 5px;
+}
